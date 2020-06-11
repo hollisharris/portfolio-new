@@ -1,0 +1,18 @@
+{
+  "name": "portfolio-new",
+  "version": "1.0.0",
+  "description": "strapi gatsby portfolio",
+  "main": "index.js",
+  "scripts": {
+    "backend": "cd backend && strapi develop",
+    "frontend": "cd frontend && gatsby develop --open",
+    "open": "open http://localhost:1337/admin",
+    "start": "concurrently \"npm run backend\" \"npm run frontend\" \"npm run open\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "http-server": "^0.12.3"
+  }
+}

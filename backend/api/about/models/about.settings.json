@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "abouts",
+  "info": {
+    "name": "About"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "hero_teaser": {
+      "type": "string"
+    },
+    "hero_headline": {
+      "type": "string"
+    },
+    "hero_description": {
+      "type": "richtext"
+    }
+  }
+}

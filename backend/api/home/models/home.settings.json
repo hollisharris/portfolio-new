@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "name": "Home"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "slug": {
+      "type": "uid",
+      "required": true
+    },
+    "hero_headline": {
+      "type": "string"
+    },
+    "hero_teaser": {
+      "type": "string"
+    },
+    "hero_description": {
+      "type": "richtext"
+    },
+    "hero_link_text": {
+      "type": "string"
+    },
+    "hero_link_url": {
+      "type": "string"
+    }
+  }
+}
