@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Hollis`,
+    title: `Made by Hollis`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
   },
@@ -26,14 +26,25 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-strapi",
+      resolve: 'gatsby-source-storyblok',
       options: {
-        apiURL: process.env.API_URL || "http://localhost:1337",
-        contentTypes: [],
-        singleTypes: ['home'],
-        queryLimit: 1000,
-      },
+        accessToken: 'hCipdN5yhp3skbCb0oxDZgtt',
+        homeSlug: 'home',
+        version: 'draft',
+        resolveLinks: 'url',
+        includeLinks: true
+      }
     },
+    {
+      resolve:`gatsby-source-cloudinary`,
+      options: {
+        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+        apiKey: process.env.CLOUDINARY_API_KEY,
+        apiSecret: process.env.CLOUDINARY_API_SECRET,
+        resourceType: `image`,
+        context: true
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
